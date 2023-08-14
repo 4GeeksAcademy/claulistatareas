@@ -27,14 +27,14 @@ const Home = () => {
 		console.log(lista)
 	}
 
-	function eliminar (index) {
+	function eliminar(index) {
 		const arregloentero = lista.filter((fila, nuevoindex) => {
 			return nuevoindex != index
 		})
 		setLista(arregloentero)
 	}
 
-	
+
 
 
 	return (
@@ -51,17 +51,17 @@ const Home = () => {
 				<ul className="list-group shadow p-3 mb-5">
 					{lista.map((lista, index) => <li onMouseEnter={function () { setBoton(true) }} onMouseLeave={function () { setBoton(false) }} className="list-group-item d-flex flex-row justify-content-between">
 						<p ClassName="m-0 p-0">{lista}</p>
-						{boton === true && <p className="text-danger opacity-50 m-0 p-0" onClick={function(){eliminar(index)}}>X</p>}
+						{boton === true && <p className="text-danger opacity-50 m-0 p-0" onClick={function () { eliminar(index) }}>X</p>}
 					</li>)}
 				</ul>
 			</div>
 			<div>
-				{lista.length ===0 ? "No hay tareas pendientes agregar tareas" : lista.length + " items restantes"} 
+				{lista.length === 0 ? "No hay tareas pendientes. Agregar tareas" : lista.length + " Tareas restantes"}
 			</div>
 		</div>
 	);
 };
- 
+
 
 export default Home;
 
