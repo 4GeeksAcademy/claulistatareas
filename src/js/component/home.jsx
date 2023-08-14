@@ -55,6 +55,9 @@ const Home = () => {
 					</li>)}
 				</ul>
 			</div>
+			<div>
+				{lista.length} <span>items restantes</span>
+			</div>
 		</div>
 	);
 };
