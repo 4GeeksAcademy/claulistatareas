@@ -56,12 +56,12 @@ const Home = () => {
 				</ul>
 			</div>
 			<div>
-				{lista.length} <span>items restantes</span>
+				{lista.length ===0 ? "No hay tareas pendientes agregar tareas" : lista.length + " items restantes"} 
 			</div>
 		</div>
 	);
 };
-
+ 
 
 export default Home;
 
